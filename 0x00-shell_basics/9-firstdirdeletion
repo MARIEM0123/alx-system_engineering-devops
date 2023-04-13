@@ -1,2 +1,2 @@
 #!/bin/bash
-sh: 1: q: not found
+rm -r /tmp/my_first_directory
