@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type d -path './*é -print | wc -1
