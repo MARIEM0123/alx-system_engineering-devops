@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((($WATER#$water) + ($STRI#$stri))
+echo $((($WATER#$water) + ($STRI#$stri)))
