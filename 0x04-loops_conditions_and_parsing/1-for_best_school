@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#the first task#the first task#the first task
 for (( c=1; c<=10; c++ ))
 do
     echo "Best School"
