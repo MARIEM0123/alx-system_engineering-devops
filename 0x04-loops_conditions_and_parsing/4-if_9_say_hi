@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The fourth task
 COUNTER=0
 while [ $COUNTER -lt 11 ]
 do

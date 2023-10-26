@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The second task
 COUNTER=0
 while [ $COUNTER -lt 10 ]
 do

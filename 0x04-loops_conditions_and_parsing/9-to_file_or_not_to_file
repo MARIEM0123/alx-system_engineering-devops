@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The ninth task
 FILE="school"
 
 if [ -e "$FILE" ]

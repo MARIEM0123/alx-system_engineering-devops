@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The seventh task
 HOURS=0
 while [ $HOURS -lt 13 ]
 do

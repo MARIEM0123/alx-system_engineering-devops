@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The eighth task
 for i in *
 do
     echo "$i" | cut -d'-' -f2

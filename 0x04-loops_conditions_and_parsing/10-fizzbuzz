@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The tenth task
 COUNTER=1
 while [ $COUNTER -lt 101 ]
 do

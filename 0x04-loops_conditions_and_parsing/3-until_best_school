@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The third task
 COUNTER=10
 until [ $COUNTER -lt 1 ]
 do
