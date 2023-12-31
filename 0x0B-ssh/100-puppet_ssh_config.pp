@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Connect to a server without typing a password
+# The script to connect to a server without entrying a password
 
 file { '/etc/ssh/ssh_config':
   ensure  => present,
