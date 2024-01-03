@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# a script to restart apache 2 in and  returning a page
+# The script is to restart apache 2 and returning a page
 # with  Hello Holberton in it when querying the root of it.
 # Start the Apache service
 service apache2 start
