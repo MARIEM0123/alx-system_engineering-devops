@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs, configures, and starts the server
+# The script to install, to configure and start the server web 01
 apt-get update
 apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
@@ -28,3 +28,4 @@ if [ "$(pgrep -c nginx)" -le 0 ]; then
 else
 	service nginx restart
 fi
+
