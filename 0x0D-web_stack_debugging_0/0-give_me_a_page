@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 # a script to restart apache 2 in and  returning a page
 # with  Hello Holberton in it when querying the root of it.
+# Start the Apache service
+service apache2 start
+
+# Ensure the document root has the correct "Hello Holberton" page
+echo "Hello Holberton" > /var/www/html/index.html
 service apache2 restart
