@@ -53,3 +53,4 @@ if [ "$(pgrep -c haproxy)" -le 0 ]; then
 else
 	sudo service haproxy restart
 fi
+
