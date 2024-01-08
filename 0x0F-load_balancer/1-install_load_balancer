@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install load balancer
+# The script to install haproxy
 
 
 echo -e "Updating and doing some minor checks...\n"
@@ -18,11 +18,11 @@ function install() {
 	fi
 }
 
-install haproxy #install haproxy
+install haproxy
 
 echo -e "\nSetting up some minor stuff.\n"
 
-# backup default server config file
+# The file config for backup default server
 sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
 
 server_config=\
@@ -45,7 +45,7 @@ backend clickviral-tech-backend
 # shellcheck disable=SC2154
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
 
-# enable haproxy to be started by init script
+# The script to enable haproxy  start by initilization
 echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
 
 if [ "$(pgrep -c haproxy)" -le 0 ]; then
@@ -53,3 +53,4 @@ if [ "$(pgrep -c haproxy)" -le 0 ]; then
 else
 	sudo service haproxy restart
 fi
+
