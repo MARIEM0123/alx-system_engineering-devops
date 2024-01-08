@@ -22,7 +22,7 @@ install haproxy
 
 echo -e "\nSetting up some minor stuff.\n"
 
-# The file config for backup default server
+# Thecript for file config for backup default server
 sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
 
 server_config=\

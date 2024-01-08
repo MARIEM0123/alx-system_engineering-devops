@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# duplicate web-01 to web-02
-# these scripts are an upgrade from the web-server scripts...
+# copy the content of  web-01 to web-02
+# the scripts are an upgrade from the web-server scripts
 
-# uncomment to see the script run in action
-#set -x
+# The script to allowing nginx to  run in action
+# Updating 
 
 echo -e "Updating and doing some minor checks...\n"
 
@@ -21,11 +21,11 @@ function install() {
 	fi
 }
 
-install nginx #install nginx
+install nginx #installation of nginx
 
 echo -e "\nSetting up some minor stuff.\n"
 
-# allowing nginx on firewall
+# give the permission to nginx on firewall
 sudo ufw allow 'Nginx HTTP'
 
 # Give the user ownership to website files for easy editing
@@ -38,20 +38,20 @@ else
 	sudo chmod -R 755 /var/www
 fi
 
-# create directories if not present
+# The script to create directories when not exist
 for dir in /var/www/{html,error}; do
 	if ! [ -d "$dir" ]; then
 		mkdir -p "$dir"
 	fi
 done
 
-# creating new index
+# The script to creat new index
 echo "Hello World!" > /var/www/html/index.html
 
-# create new error page
+# The script to create new error page
 echo "Ceci n'est pas une page" > /var/www/html/error_404.html
 
-# backup default server config file
+# The script to creat backup default server config file
 sudo cp /etc/nginx/sites-enabled/default nginx-sites-enabled_default.backup
 
 server_config=\
