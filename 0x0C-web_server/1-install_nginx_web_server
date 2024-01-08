@@ -1,9 +1,26 @@
 #!/usr/bin/env bash
-# The script to install inginx
-#The condition :  Nginx should be listening on port 80
-sudo apt-get update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo echo "Hello, world!" | sudo tee /var/www/html/index.html
+# The script is to install ngnix in  my server web-01
+# Nginx should be listening on port 80 and curl localhost
+# curl localhost should result "Hello World!" displayed
+sudo apt -y update
+sudo apt -y install nginx
+rm -rf school
+mkdir school
+touch school/index.html
+echo "Hello World!" > school/index.html
+sudo rm -rf /var/www/school
+sudo mv school /var/www/
+touch default
+printf %s "server {
+       listen 80;
+       listen [::]:80;
+
+       root /var/www/school;
+       index index.html;
+}
+" > default
+sudo rm -rf /etc/nginx/sites-available/default
+sudo mv default /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
 
