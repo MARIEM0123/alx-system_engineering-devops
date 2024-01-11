@@ -2,3 +2,4 @@
 # find out what keeping your Ubuntu installation from listening on port
 sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 service nginx restart
+
