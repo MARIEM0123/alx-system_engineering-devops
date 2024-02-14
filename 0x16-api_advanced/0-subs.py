@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for task 0"""
+"""Module for task 0 to reedit API return subscribers number"""
 
 
 def number_of_subscribers(subreddit):
@@ -15,3 +15,4 @@ def number_of_subscribers(subreddit):
         return 0
 
     return sub_info.json().get("data").get("subscribers")
+
