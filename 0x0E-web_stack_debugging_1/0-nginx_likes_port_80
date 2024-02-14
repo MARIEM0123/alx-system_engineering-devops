@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# find out what keeping your Ubuntu installation from listening on port
-sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+# The script configures an Nginx server to listen on port 80.
+
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
 
